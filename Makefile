@@ -21,6 +21,8 @@ Sources += $(wildcard *.R)
 
 ## assumptions.Rout: assumptions.R assumptions.md ##
 
+## quadFits.Rout: quadFits.R quadFits.md
+
 ######################################################################
 
 ### Makestuff
