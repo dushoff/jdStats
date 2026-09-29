@@ -1,7 +1,7 @@
 
 ## Summary
 
-Here is [an attempt at the example you asked for](https://github.com/dushoff/jdStats/blob/main/outputs/assumptions.Rout.pdf).
+Here is [an attempt at the example you asked for](https://github.com/dushoff/jdStats/blob/main/outputs/lnormFits.Rout.pdf).
 
 It's a two-group model with a ratio of two in the mean. Deviates are lognormal, but we model the groups with lm. As the sample size increases, the Dharma becomes more likely to signal that the model is bad (relative weight of the one or two left bars in the left plot, I am showing only KS for now), but the fit becomes more reliable (piano plot for the true effect size under the naive model in the right plot).
 

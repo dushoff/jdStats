@@ -19,7 +19,7 @@ Sources += $(wildcard *.md)
 autopipeR = defined
 Sources += $(wildcard *.R)
 
-## assumptions.Rout: assumptions.R assumptions.md ##
+## lnormFits.Rout: lnormFits.R lnormFits.md ##
 
 ## quadFits.Rout: quadFits.R quadFits.md
 
