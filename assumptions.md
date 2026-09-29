@@ -3,27 +3,11 @@
 
 Here is [an attempt at the example you asked for](https://github.com/dushoff/jdStats/blob/main/outputs/assumptions.Rout.pdf).
 
+Here is [an attempt at the example you asked for](https://github.com/dushoff/jdStats/blob/main/assumptions.md).
+
 It's a two-group model with a ratio of two in the mean. Deviates are lognormal, but we model the groups with lm. As the sample size increases, the Dharma becomes more likely to signal that the model is bad (relative weight of the one or two left bars in the left plot, I am showing only KS for now), but the fit becomes more reliable (piano plot for the true effect size under the naive model in the right plot).
 
 ## Prompts
-
-My R style is:
-* tab indentation
-* explicit print() and return()
-* Continuation characters (|> and , particularly) at the beginning rather than end of lines (protected by parens), e.g.:
-
-Please use the make pipeline: to show me something from assumptions.R, use `make assumptions.Rout` or `make assumptions.Rout.pdf`
-
-dat <- (dat
-	|> mutate(x=3*d
-		, y=x^2
-	)
-	|> filter ...
-)
-
-Although in this instance I would put the mutate call on a single line, since everything is short.
-
-In assumptions.R:
 
 I want groupSim(m0=1, m1, sdlog, n) to create a data frame with group as a factor (0 or 1) and n lognormal deviates for each group, with m0 and m1 giving the actual group means (not meanlog or exp(meanlog)) and sdlog being the sdlog for each group). You can also write a test call. 
 
@@ -41,7 +25,5 @@ Can we have a wrapper that runs simP “rep” times and produces a nice table? 
 I want one histogram per page, with "free" scales. Also, I meant that I want explicit returns when I'm returning something, meaning no implicit returns. We don't need the return from pHist.
 
 Can we have fixed bins spanning 0:1, length.out=41? Don't worry about other changes I made, assume they're fine for now.
-
-Please drop the Dharma plot (comment it out).
 
 I would like a new function now that plots only KS and beta, using facet_wrap or facet_grid, whichever makes sense. Choose a sensible dimension so that each histogram is a bit wider than high and it looks nice on my laptop screen. Each page should have sdlog and n in the title.
