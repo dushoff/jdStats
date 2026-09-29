@@ -16,6 +16,13 @@ Sources += $(wildcard *.md)
 
 ######################################################################
 
+autopipeR = defined
+Sources += $(wildcard *.R)
+
+## assumptions.Rout: assumptions.R assumptions.md ##
+
+######################################################################
+
 ### Makestuff
 
 Sources += Makefile
@@ -35,7 +42,7 @@ makestuff:
 
 -include makestuff/os.mk
 
-## -include makestuff/pipeR.mk
+-include makestuff/pipeR.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
