@@ -46,6 +46,14 @@ test: vitamins_plot.Rout vitamins_scramble.Rout
 
 ######################################################################
 
+## Cribbing (temp!)
+
+.PRECIOUS: %.R
+%.R:
+	$(CP) ../statsTalks/$@ .
+ 
+######################################################################
+
 ## Mammal tail example inspired by Ian Dworkin
 tails.Rout: tails.R tails.md
 tailPlot.Rout: tailPlot.R tails.rds
