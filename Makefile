@@ -39,7 +39,7 @@ vitamins_data.Rout: vitamins_data.R
 
 vitamins_plot.Rout: vitamins_plot.R vitamins_data.rda
 
-vitamins_scramble.Rout: vitamins_scramble.R permcount.R
+## vitamins_scramble.Rout: vitamins_scramble.R permcount.R
 vitamins_scramble.Rout: permcount.rda vitamins_data.rda
 
 test: vitamins_plot.Rout vitamins_scramble.Rout

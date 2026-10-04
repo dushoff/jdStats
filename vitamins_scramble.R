@@ -1,5 +1,6 @@
 library(shellpipes)
 loadEnvironments()
+startGraphics()
 
 reps <- 1999
 set.seed(0612)

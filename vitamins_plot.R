@@ -7,11 +7,11 @@ startGraphics()
 
 set.seed(411)
 
-vitamins <- data.frame(treat=treat, growth=growth)
-summary(lm(growth~treat, data=vitamins))
+vitamins <- data.frame(treatment=treat, growth=growth)
+summary(lm(growth~treatment, data=vitamins))
 
 samPlot <- function(scramble=FALSE){
-	vitamins$treatment <- vitamins$treat
+	vitamins$treatment <- vitamins$treatment
 	if(scramble){
 		vitamins$treatment <- sample(treat)
 	} 
@@ -19,11 +19,11 @@ samPlot <- function(scramble=FALSE){
 		print(diff <- mean(growth[treatment=="A"]) - 
 			mean(growth[treatment=="B"]))
 	)
-	print(ggplot(vitamins, aes(x=treatment, y=growth, colour=treat))
+	print(ggplot(vitamins, aes(x=treatment, y=growth, colour=treatment))
 		+ geom_point(size=3.8)
 		+ theme(text = element_text(size=20))
-		+ xlab("Treatment")
-		+ ylab("Proportonal growth")
+		+ xlab("Group")
+		+ ylab("Effect")
 	)
 }
 

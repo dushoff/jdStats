@@ -47,7 +47,7 @@ permp <- function(l, v, test="two.tailed", Ptarget=0.05, warn=0.01, useObs=TRUE)
 }
 
 permhist <- function(l, v=NULL,
-	aheight=0.4, aoffset=0, awidth=2, main="", xlab="values",
+	aheight=0.4, aoffset=0, awidth=2, main="", xlab="difference",
 	label="left", cex=1,
 	obs="Observed", test="two.tailed", dp=4, useObs=TRUE
 ){
