@@ -19,6 +19,8 @@ Sources += $(wildcard *.md)
 autopipeR = defined
 Sources += $(wildcard *.R)
 
+## claude --resume c876bfaf-d364-46f6-8ad5-646044980410
+
 ## lnormFits.Rout: lnormFits.R lnormFits.md ##
 
 ## quadFits.Rout: quadFits.R quadFits.md
