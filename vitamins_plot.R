@@ -11,19 +11,18 @@ vitamins <- data.frame(treatment=treat, growth=growth)
 summary(lm(growth~treatment, data=vitamins))
 
 samPlot <- function(scramble=FALSE){
-	vitamins$treatment <- vitamins$treatment
+	vitamins$group <- vitamins$treatment
 	if(scramble){
-		vitamins$treatment <- sample(treat)
+		vitamins$group <- sample(treat)
 	} 
-	with(vitamins, 
-		print(diff <- mean(growth[treatment=="A"]) - 
-			mean(growth[treatment=="B"]))
+	est <- with(vitamins, 
+		mean(growth[group=="A"]) - mean(growth[group=="B"])
 	)
-	print(ggplot(vitamins, aes(x=treatment, y=growth, colour=treatment))
+	print(ggplot(vitamins, aes(x=group, y=growth, colour=treatment))
 		+ geom_point(size=3.8)
 		+ theme(text = element_text(size=20))
-		+ xlab("Group")
 		+ ylab("Effect")
+		+ ggtitle(sprintf("%7.5f", est))
 	)
 }
 
