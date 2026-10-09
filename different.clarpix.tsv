@@ -1,0 +1,7 @@
+pic	lwr	upr	val	atext
+PL	1.1	1.7	.	Different
+PU	0.2	1.2	.	Different
+PS	0.6	0.8	.	Different
+US	-0.2	0.8	.	Not different
+UU	-0.6	1.2	.	Not different
+nopower	-1.2	1.8	.	Not different

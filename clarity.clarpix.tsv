@@ -1,0 +1,7 @@
+pic	lwr	upr	val	atext
+PL	1.1	1.7	.	Clearly large|and positive
+PU	0.2	1.2	.	Clearly positive,|maybe large
+PS	0.6	0.8	.	Clearly positive|and not large
+US	-0.2	0.8	.	Maybe positive,|clearly small
+UU	-0.6	1.2	.	Not significantly negative
+nopower	-1.2	1.8	.	Should have|done a power|analysis first
