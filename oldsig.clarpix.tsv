@@ -1,0 +1,7 @@
+pic	lwr	upr	val	atext
+PL	1.1	1.7	.	There is a significant effect;| it looks large
+PU	0.8	1.8	.	There is a significant effect;| it looks large (!)
+PS	0.6	0.8	.	There is a significant effect;| it looks small
+US	-0.2	0.8	.	There is no significant effect
+UU	-0.6	1.2	.	There is no significant effect
+nopower	-1.2	1.8	.	There is no significant effect

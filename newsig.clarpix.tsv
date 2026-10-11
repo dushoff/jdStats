@@ -1,0 +1,7 @@
+pic	lwr	upr	val	atext
+PL	1.1	1.7	.	Clearly significant
+PU	0.2	1.2	.	Clearly positive,|maybe significant
+PS	0.6	0.8	.	Clearly positive,|not significant
+US	-0.2	0.8	.	Maybe positive,|not significant
+UU	-0.6	1.2	.	Not significantly negative
+nopower	-1.2	1.8	.	Insufficient power

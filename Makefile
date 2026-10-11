@@ -50,12 +50,29 @@ test: vitamins_plot.Rout vitamins_scramble.Rout
 
 ######################################################################
 
+## Clarity pix
+
+Sources += $(wildcard *.clarpix.tsv)
+## clarity.clarpix.Rout: clarpix.R clarity.clarpix.tsv
+## newsig.clarpix.Rout: clarpix.R newsig.clarpix.tsv
+## oldsig.clarpix.Rout: clarpix.R oldsig.clarpix.tsv
+## different.clarpix.Rout: clarpix.R different.clarpix.tsv
+%.clarpix.Rout: clarpix.R %.clarpix.tsv
+	$(pipeR)
+
+######################################################################
+
+
 ## Cribbing (temp!)
 
 .PRECIOUS: %.R
 %.R:
-	$(CP) ../statsTalks/$@ .
- 
+	$(CP) ../sandbox/$@ .
+
+.PRECIOUS: %.tsv
+%.tsv:
+	$(CP) ../sandbox/$@ .
+
 ######################################################################
 
 ## Mammal tail example inspired by Ian Dworkin
