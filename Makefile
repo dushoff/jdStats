@@ -62,12 +62,29 @@ Sources += $(wildcard *.clarpix.tsv)
 
 ######################################################################
 
+## Mammal tail example inspired by Ian Dworkin
+## Moving a copy to jdStats for now? 2026 Oct 16 (Fri)
 
-## Cribbing (temp!)
+## Invent fake data
+tails.Rout: tails.R
+
+## Box plots: mouse vs. elephant, lin vs log
+tailPlot.Rout: tailPlot.R tails.rds
+
+## Elephant data only: se gets smaller, sd doesn't
+## Glance at histogram to see how bimodal it looks
+tailSpread.Rout: tailSpread.R tails.rds
+
+tailModels.Rout: tailModels.R tails.rds
+
+##################################################################
+
+
+## Cribbing
 
 .PRECIOUS: %.R
 %.R:
-	$(CP) ../sandbox/$@ .
+	$(CP) ../statsTalks/$@ .
 
 .PRECIOUS: %.tsv
 %.tsv:
